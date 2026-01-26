@@ -1,0 +1,35 @@
+<!--Chapter Summary
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program-->
+
+
+
+<!-- What is a correct syntax for an HTML hyperlink? -->
+<a href='/home.htm'>Visit W3Schools.com!</a>
+
+<!-- Use the correct HTML to make the text below into a link to "default.html". -->
+<a href = "default.html">Visit our HTML tutorial.</a>
+
+<!-- Use the correct HTML attribute to make the link open in a new window. -->
+<a href="html_images.asp" target="_blank">HTML Images</a>
+
+<!-- Use the correct HTML to make the image become a link to "default.html". -->
+<a href="default.html">
+<img src ="smiley.gif">
+</a>
+
+<!--Add a "tooltip" to the link.
+The "tooltip" should say "Home".-->
+<a href="default.html" title="Home">Back to Home</a>
+
+<!-- Use CSS to remove the underline from the link. -->
+<a href="html_images.asp" style="text-decoration:none;">HTML Images</a>
+
+<!--Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):-->
+<a href="mailto:someone@example.com">Send email</a>
+
+<!--JavaScript allows you to specify what happens at certain events, such as a click of a button:-->
+<button onclick="document.location='default.asp'">HTML Tutorial</button>

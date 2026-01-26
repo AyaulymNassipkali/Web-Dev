@@ -1,0 +1,320 @@
+<!--Cell Padding-->
+th, td {
+    padding: 15px;
+  }
+
+<!--To add padding only above the content, use the padding-top property.
+
+Add padding to the other sides with the padding-bottom, padding-left, and padding-right properties:
+
+-->
+
+th, td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+<!--Cell spacing-->
+<!--To change the space between table cells, use the CSS border-spacing property on the table element:-->
+table {
+    border-spacing: 30px;
+  }
+
+<!--Table Colspan & Rowspan-->
+<!--Colspan-->
+<table>
+    <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>57</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Jill</th>
+    </tr>
+    <tr>
+        <td rowspan = "2">Phone</td>
+        <td>555-1234</td>
+    </tr>
+    <tr>
+        <td>555-8745</td>
+    </tr>
+</table>
+
+<!--Table Styling-->
+<!--To style every other table row element, use the :nth-child(even) selector like this:-->
+tr:nth-child(even){
+    background-color: #D6EEEE;
+}
+<!--Note: If you use (odd) instead of (even), the styling will occur on row 1,3,5 etc. instead of 2,4,6 etc.-->
+
+<!--Combine Vertical and Horizontal Zebra Stripes-->
+<!--Use an rgba() color to specify the transparency of the color:-->
+tr:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+  }
+  
+  th:nth-child(even),td:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+}
+
+<!--Horizontal Dividers-->
+<!--Add the border-bottom property to all tr elements to get horizontal dividers:-->
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+<!--Hoverable Table-->
+tr:hover {background-color: #D6EEEE;}
+
+<!--Table Colgroup-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Colgroup</h2>
+<p>Add the a colgroup with a col element that spans over two columns to define a style for the two columns:</p>
+
+<table style="width: 100%;">
+<colgroup>
+  <col span="2" style="background-color: #D6EEEE">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+<!--Note: The <colgroup> tag must be a child of a <table> element 
+    and should be placed before any other table elements, 
+    like <thead>, <tr>, <td> etc., but after the <caption> element, 
+    if present.-->
+
+<!--Legal CSS Properties
+There is only a very limited selection of CSS properties that are allowed to be used in the colgroup:
+
+width -- property
+visibility -- property
+background -- properties
+border -- properties
+
+All other CSS properties will have no effect on your tables.-->
+
+<!--Multiple Col Elements-->
+<!--If you want to style multiple columns with different styles, use more than one <col> element inside the <colgroup>:-->
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Multiple Col Elements</h2>
+    <p>Add multiple col elements in the colgroup:</p>
+    
+    <table style="width: 100%;">
+      <colgroup>
+        <col span="2" style="background-color: #D6EEEE">
+        <col span="3" style="background-color: pink">
+      </colgroup>
+    <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+    <th>FRI</th>
+    <th>SAT</th>
+    <th>SUN</th>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    </tr>
+    <tr>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+    <td>13</td>
+    <td>14</td>
+    </tr>
+    <tr>
+    <td>15</td>
+    <td>16</td>
+    <td>17</td>
+    <td>18</td>
+    <td>19</td>
+    <td>20</td>
+    <td>21</td>
+    </tr>
+    <tr>
+    <td>22</td>
+    <td>23</td>
+    <td>24</td>
+    <td>25</td>
+    <td>26</td>
+    <td>27</td>
+    <td>28</td>
+    </tr>
+    </table>
+    
+    </body>
+    </html>
+
+<!--Empty Colgroups-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Empty Colgroups</h2>
+<p>Add "empty" col elements that represents the columns before the columns you want to style:</p>
+
+<table style="width: 100%;">
+<colgroup>
+  <col span="3">
+  <col span="2" style="background-color: pink">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+<!--Hide Columns-->
+<!--You can hide columns with the visibility: collapse property:-->
+<table>
+    <colgroup>
+      <col span="2">
+      <col span="3" style="visibility: collapse">
+    </colgroup>
+    <tr>
+      <th>MON</th>
+      <th>TUE</th>
+      <th>WED</th>
+      <th>THU</th>
+  ...
+
